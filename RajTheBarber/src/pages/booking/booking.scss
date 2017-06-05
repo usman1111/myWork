@@ -1,0 +1,45 @@
+@mixin platform-background-image($url) {
+  background: url($url) no-repeat;
+}
+
+page-booking {
+    .header {
+        margin-top: 3vh;
+        margin-left: 3vh;
+        font-size: 5vh;
+        color: black;
+        height: 20px;
+        width: 20px;
+    }
+    .booking-wrapper {
+        @include platform-background-image("../assets/images/bgBooking.png");
+        text-align: center;
+    }
+    .booking {
+        background: white;
+        height: 55%;
+        margin-top: 61.5%;
+        position: relative;
+        width: 100%;
+    }
+    .booking:before {
+        border-bottom: 90px solid white;
+        border-left: 0px solid transparent;
+        border-right: 58vh solid transparent;
+        content: "";
+        height: 0;
+        left: 0;
+        position: absolute;
+        top: -90px;
+        width: 0;
+    }
+    h2 {
+        position: absolute;
+        margin-left: 30px;
+        top: -40px;
+    }
+    .booking-form {
+        margin-top: 50px;
+    }
+
+}

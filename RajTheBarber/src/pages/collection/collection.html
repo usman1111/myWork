@@ -1,0 +1,19 @@
+<ion-header class="header">
+  <ion-icon name="ios-return-left" (click)="goToHome()"></ion-icon>
+</ion-header>
+
+<ion-content class="collection-wrapper">
+  <ion-card-content class="collection">
+    <h2>COLLECTION</h2>
+
+    <ion-card>
+      <ion-card-header>{{title}}</ion-card-header>
+      <ion-slides class="image-slider" loop="true" effect="coverflow">
+        <ion-slide *ngFor="let img of images">
+          <img src="../../assets/images/collection/{{img}}" class="thumb-img" imageViewer>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+
+  </ion-card-content>
+</ion-content>

@@ -1,0 +1,27 @@
+@mixin platform-background-image($url) {
+  background: url($url) no-repeat center;
+}
+
+page-login {
+
+    .login-wrapper {
+        @include platform-background-image("../assets/images/bg.png");
+        text-align: center;
+    }
+    .login {   
+        text-align: center;
+        left: 2.5vh;
+        right: 2.5vh;
+        top: 65%;
+        position: fixed;
+    }
+    #loggInn, #registrerDeg {
+        color: white;
+        margin-top: 2vh;
+        font-size: 2.3vh;
+        box-shadow: 2px 2px 2px grey;
+    }
+    .mail, .lock {
+        font-size: 25px;
+    }
+}

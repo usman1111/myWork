@@ -1,0 +1,44 @@
+@mixin platform-background-image($url) {
+  background: url($url) no-repeat;
+}
+
+page-collection {
+    .header {
+        margin-top: 3vh;
+        margin-left: 3vh;
+        font-size: 5vh;
+        color: white;
+        height: 20px;
+        width: 20px;
+    }
+    .collection-wrapper {
+        @include platform-background-image("../assets/images/bgCollection.png");
+        text-align: center;
+    }
+    .collection {
+        background: white;
+        height: 65%;
+        margin-top: 61.5%;
+        position: relative;
+        width: 100%;
+    }
+    .collection:before {
+        border-bottom: 90px solid white;
+        border-left: 0px solid transparent;
+        border-right: 58vh solid transparent;
+        content: "";
+        height: 0;
+        left: 0;
+        position: absolute;
+        top: -90px;
+        width: 0;
+    }
+    h2 {
+        position: absolute;
+        margin-left: 30px;
+        top: -40px;
+    }
+    .thumb-img {
+        text-align: center;
+    }
+}

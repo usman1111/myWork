@@ -1,0 +1,66 @@
+<ion-header class="header">
+  <ion-icon name="ios-return-left" (click)="goToHome()"></ion-icon>
+</ion-header>
+
+<ion-content class="booking-wrapper">
+  <div class="booking">
+    <h2>BOOKING</h2>
+
+    <form novalidate class="booking-form" [formGroup]="orderSheetForm">
+
+        <ion-card class="chooseDate">
+          <section class="customer-date">
+            <ion-label>Choose date</ion-label>
+            <ion-datetime displayFormat="DD/MMM/YY" max="2017-12-31" formControlName="customerDate"></ion-datetime>
+          </section>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header >
+            Haircut 750kr
+          </ion-card-header>
+          <ion-card-content>
+            Haircut is with washing and styling.
+          </ion-card-content>
+          <ion-checkbox id="haircut" color="hoved" formControlName="haircut"></ion-checkbox>
+        </ion-card>
+      
+        <ion-card>
+          <ion-card-header >
+            Shape Up 350kr
+          </ion-card-header>
+          <ion-card-content>
+            Trim off the beard + edges with a good old-fashioned knife with warm and cold cover for treatment.
+          </ion-card-content>
+          <ion-checkbox id="shapeUp" color="hoved" formControlName="shapeUp"></ion-checkbox>
+        </ion-card>
+      
+        <ion-card>
+          <ion-card-header >
+            Clean Shave 450kr
+          </ion-card-header>
+          <ion-card-content>
+            Smooth shave with good old fashioned fashion with warm and cold cover for treatment.
+          </ion-card-content>
+          <ion-checkbox id="cleanShave" color="hoved" formControlName="cleanShave"></ion-checkbox>
+        </ion-card>
+      
+      <ion-card class="messageBox">
+        <ion-card-content>
+          <section class="customer-name">
+          <ion-input type="text" placeholder="Name" required formControlName="customerName"></ion-input>
+          </section>
+          <section class="customer-phone">
+          <ion-input type="number" placeholder="Mobilephone" required formControlName="customerPhone"></ion-input>
+          </section>
+          <section class="customer-note">
+          <ion-input type="text" placeholder="Message to the barber" formControlName="customerNote"></ion-input>
+          </section>
+        </ion-card-content>
+        <button id="submit" ion-button round color="hoved" (click)="onSubmitForm()">Submit</button>
+      </ion-card>
+
+    </form>
+
+  </div>
+</ion-content>

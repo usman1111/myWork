@@ -1,0 +1,30 @@
+<ion-content class="login-wrapper">
+  <ion-list inset class="login">
+
+    <div id="login-content">
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-mail" class="mail"></ion-icon>
+        </ion-label>
+        <ion-input type="text" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <ion-icon name="ios-lock" class="lock"></ion-icon>
+        </ion-label>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+    </div>
+
+    <button ion-button round id="loggInn" color="hoved" (click)="login()">
+        Sign in
+    </button>
+    <button ion-button round id="registrerDeg" color="hoved" (click)="register()">
+        Sign up
+    </button>
+
+
+
+  </ion-list>
+</ion-content>
